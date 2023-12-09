@@ -1,5 +1,5 @@
 import { useCallback, useReducer } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import { TextInput, Button } from 'react-native-paper';
 import Input from '../../../components/UI/Input';
 import { inputFields } from '../../../data/localData';
@@ -66,7 +66,7 @@ const SignUpUser = (props: any) => {
     [dispatchFormState]
   );
     return (
-        <View style={styles.container}>
+        <SafeAreaView style={styles.container}>
       <Text style={styles.header}>
         Sign Up For User Registration
       </Text>
@@ -82,18 +82,18 @@ const SignUpUser = (props: any) => {
       onPress={() => props.navigation.navigate('loginUser')}>
           Sign Up
       </Button>
-    </View>
+    </SafeAreaView>
     )
 }
 
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      marginTop: 30,
       padding: 20,
       paddingHorizontal: 50,
       backgroundColor: '#fff',
       alignItems: 'center',
+      justifyContent: 'center'
     },
     formInputs: {
       marginTop: 20,
@@ -101,7 +101,8 @@ const styles = StyleSheet.create({
     },
     header: {
       fontSize: 20,
-      fontWeight: '700'
+      fontWeight: '700',
+      marginBottom: 10
     },
     signUpButton: {
       width: '100%',

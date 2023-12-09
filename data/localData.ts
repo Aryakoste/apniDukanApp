@@ -1,3 +1,7 @@
+export const stores = [{
+  
+}];
+
 export const inputFields = [
     {
       id: 'email',
@@ -27,5 +31,23 @@ export const inputFields = [
         type: 'customValidation',
       }],
       keyboardType: 'default'
+    },
+    {
+      id: 'lastname',
+      label: 'Last Name',
+      placeholder: 'Enter your last name',
+      validations: [{
+        type: 'customValidation',
+      }],
+      keyboardType: 'default'
+    },
+    {
+      id: 'phonenumber',
+      label: 'Phone Number',
+      placeholder: 'Enter your phone number',
+      validations: [{
+        type: 'customValidation',
+      }],
+      keyboardType: 'numeric'
     },
   ];
