@@ -1,5 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
-import { UserAuthNavigator, UserMainNavigator } from '../Navigation/MainNavigator';
+import { StoreNavigator, UserAuthNavigator } from '../Navigation/MainNavigator';
 import { useSelector } from 'react-redux';
 import StartupScreen from '../screens/StartupScreen';
 
@@ -13,7 +13,7 @@ const AppNavigator = () => {
         {console.log(isAuth, isVendor, tryLogin)}
         {!isAuth && !tryLogin && <StartupScreen />}
         {!isAuth && tryLogin && !isVendor && <UserAuthNavigator />}
-        {isAuth && !isVendor && <UserMainNavigator />}
+        {isAuth && !isVendor && <StoreNavigator />}
     </NavigationContainer>
 }
 
